@@ -13,9 +13,6 @@ class Teacher < Person
   end
 end
 
+teacher1 = Teacher.new('Mohsen', 35, 'Mathematics')
 
-teacher1 = Teacher.new('Ms. Smith', 35, 'Mathematics')
-
-puts teacher1.name
 puts teacher1.specialization
-puts teacher1.can_use_services?
