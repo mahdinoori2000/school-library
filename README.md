@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>Making Enumerable</b></h3>
+  <h3><b>School Library</b></h3>
 
 </div>
 
@@ -35,7 +35,7 @@
 # 📖 Code Morse <a name="about-project"></a>
 
 
-**Enumerable** is a Ruby application where you We made enumerable for all any and filter. 
+**School-library** is a Ruby application where you can add student and teachers in to it. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -54,7 +54,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Add enumerable **
+- **Classes for teacher and student **
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,7 +82,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/mahdinoori2000/enumerable.git
+  git clone https://github.com/mahdinoori2000/school-library.git
 ```
 
 
@@ -92,7 +92,7 @@ Install this project with:
 
 
 ```sh
-  cd morse-code
+  cd school-library
   bundle install
 ```
 
@@ -103,7 +103,7 @@ To run the project, execute the following command:
 
 
 ```sh
-  ruby my_list.rb  
+  ruby file_name.rb  
 ```
 
 
@@ -136,7 +136,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/mahdinoori2000/enumerable/issues).
+Feel free to check the [issues page](https://github.com/mahdinoori2000/school-library/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -155,7 +155,7 @@ If you like this project drop a ⭐️
 
 
 
-I would like to thank from Microverse for adding the guidlines of project. Also, I would like to thank from my coding partner for making much progress and helping me in this project.
+I would like to thank from Microverse for adding the guidlines of project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>>
 
