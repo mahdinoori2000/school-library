@@ -13,6 +13,6 @@ class Teacher < Person
   end
 end
 
-teacher1 = Teacher.new(35, 'mohsen' 'Mathematics')
+teacher1 = Teacher.new(35, 'mohsen', 'Mathematics')
 
 puts teacher1.specialization
