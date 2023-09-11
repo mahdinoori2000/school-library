@@ -14,7 +14,7 @@ class Teacher < Person
 end
 
 
-teacher1 = Teacher.new("Ms. Smith", 35, "Mathematics")
+teacher1 = Teacher.new('Ms. Smith', 35, 'Mathematics')
 
 puts teacher1.name
 puts teacher1.specialization
