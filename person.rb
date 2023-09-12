@@ -1,12 +1,13 @@
-require_relative './name_able'
-require_relative './capitalizer'
-require_relative './trimmer'
+require_relative 'name_able'
+require_relative 'capitalizer'
+require_relative 'trimmer'
 
 class Person < Nameable
   attr_accessor :name, :age
   attr_reader :id
 
   def initialize(age, name = 'Unknown', parent_permission: true)
+    super()
     @id = Random.rand(1..10_000)
     @name = name
     @age = age
