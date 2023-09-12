@@ -1,13 +1,12 @@
-require './name_able'
+require_relative './name_able'
+require_relative './capitalizer'
 
-class Detector < Nameble
-    def initialize(name)
-    super()
-    @name = name
+class Decorator < Nameable
+    def initialize(nameCap)
+    @nameCap = nameCap
     end
 
     def correct_name
-        @name.correct_name
+        @nameCap.correct_name
     end
 end
-
