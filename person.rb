@@ -3,8 +3,8 @@ require_relative 'capitalizer'
 require_relative 'trimmer'
 
 class Person < Nameable
-  attr_accessor :name, :age
-  attr_reader :id, :rental
+  attr_accessor :name, :age, :rental
+  attr_reader :id
 
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
