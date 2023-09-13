@@ -4,7 +4,7 @@ require_relative 'trimmer'
 
 class Person < Nameable
   attr_accessor :name, :age
-  attr_reader :id
+  attr_reader :id, :rental
 
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
@@ -12,10 +12,15 @@ class Person < Nameable
     @name = name
     @age = age
     @parent_permission = parent_permission
+    @rentals = []
   end
 
   def correct_name
     @name
+  end
+
+  def rent_book(book, date)
+    book.add_rental(self, date)
   end
 
   private
