@@ -14,7 +14,7 @@ class App
   def create_book
     print "\nTitle: "
     name = gets.chomp
-    print "Author: "
+    print 'Author: '
     author = gets.chomp
     new_book = Book.new(name, author)
     @books << new_book
@@ -27,51 +27,47 @@ class App
     option = gets.chomp.to_i
 
     if option == 1
-    print "age: "
-    student_age = gets.chomp.to_i
-    print "name: "
-    student_name = gets.chomp
-    print "Has parent permission? [Y/N]"
-    classroom = Classroom.new("class 1")
-    parent_permission = gets.chomp.downcase
-    new_student = Student.new(classroom, student_age, student_name)
-    @people << new_student
-    puts "Person created successfully\n\n"
+      print 'age: '
+      student_age = gets.chomp.to_i
+      print 'name: '
+      student_name = gets.chomp
+      print 'Has parent permission? [Y/N]'
+      classroom = Classroom.new('class 1')
+      parent_permission = gets.chomp.downcase
+      new_student = Student.new(classroom, student_age, student_name)
+      @people << new_student
+      puts "Person created successfully\n\n"
 
     elsif option == 2
-     print "age: "
-     teacher_age = gets.chomp.to_i
-     print "name: "
-     teacher_name = gets.chomp
-     print "Specialization: "
-     specialization = gets.chomp
-     new_teacher = Teacher.new(teacher_name, teacher_age, specialization)
-     @people << new_teacher
-    puts "Person created successfully\n\n"
+      print 'age: '
+      teacher_age = gets.chomp.to_i
+      print 'name: '
+      teacher_name = gets.chomp
+      print 'Specialization: '
+      specialization = gets.chomp
+      new_teacher = Teacher.new(teacher_name, teacher_age, specialization)
+      @people << new_teacher
+      puts "Person created successfully\n\n"
 
-    else 
-      puts "Invalid Character"
+    else
+      puts 'Invalid Character'
     end
   end
 
   def create_rental
     if !@people.empty? && !@books.empty?
-      puts "Select a book from the following list by a number:"
+      puts 'Select a book from the following list by a number:'
       list_all_books
       book_index = gets.chomp.to_i
       selected_book = @books[book_index]
-      
-      puts "Select a person from the following list by a number:"
+      puts 'Select a person from the following list by a number:'
       list_all_people
       people_index = gets.chomp.to_i
       selected_person = @people[people_index]
-      
-      print "Date: "
+      print 'Date: '
       selected_date = gets.chomp
-      
       new_rental = Rental.new(selected_book, selected_person, selected_date)
       @rentals << new_rental
-      
       puts "Rental created successfully\n\n"
     else
       puts "You don't have both a book and a person in your library. Please add at least one of each."
@@ -102,11 +98,11 @@ class App
       puts '------- LIST OF People -------------'
       puts '------------------------------------'
       @people.each_with_index do |person, index|
-        if person.is_a?(Student)
-          role = "[Student]"
-        else
-          role = "[Teacher]"
-        end
+        role = if person.is_a?(Student)
+                 '[Student]'
+               else
+                 '[Teacher]'
+               end
         puts "#{index} - #{role} - Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
       end
       puts "------------------------------------------------------------\n\n"
@@ -133,7 +129,4 @@ class App
       end
     end
   end
-
-  
-
 end
