@@ -111,26 +111,25 @@ end
 
   def list_all_rentals
     if @rentals.empty?
-      puts "No rentals added."
+      puts 'No rentals available at the moment.'
     else
-      puts "--------------------------------------"
-      puts "---------- LIST OF RENTALS -----------"
-      puts "--------------------------------------"
-  
-      print "Enter the person's ID to list rentals: "
-      person_id = gets.chomp.to_i
-      @rentals.each_with_index do |rental, index|
-        book = rental.book
-        person = rental.person
-        date = rental.date
-  
-        # Check if the person_id matches the rental's person's ID
-        if person_id == 0  && person.id == person_id
-          print "#{index + 1} - Date: #{date}, Book: #{book.title} By #{person.name}\n\n"
+      print 'To view your rentals, enter your ID: '
+      id = gets.chomp.to_i
+      rental = @rentals.select { |rend| rend.person.id == id }
+
+      if rental.empty?
+        puts 'No records for that ID.'
+      else
+        puts 'Here are your records:'
+        puts ''
+        rental.each_with_index do |record, index|
+          puts "#{index + 1}| Date: #{record.date} | Borrower: #{record.person.name} | " \
+               "Status: #{record.person.class} | Borrowed book: \"#{record.book.title}\" by #{record.book.author}"
         end
       end
     end
   end
+
   
 
 end

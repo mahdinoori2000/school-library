@@ -12,7 +12,7 @@ def method(my_class)
     3 => 'create_person',
     4 => 'create_book',
     5 => 'create_rental',
-    6 => 'list_all_linters',
+    6 => 'list_all_rentals',
     7 => 'exit'
   }
   puts @list
