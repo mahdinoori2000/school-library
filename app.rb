@@ -55,24 +55,28 @@ class App
   end
 
   def create_rental
-    if !@people.empty? 
-    puts "Select a book from the following list by a number:"
-    list_all_books
-    book_index = gets.chomp.to_i
-    selected_book = @books[book_index]
-    puts "Select a person from the following list by a number:"
-    list_all_people
-    people_index = gets.chomp.to_i
-    selected_people = @books[people_index]
-    print "Date: "
-    selected_date = gets.chomp
-    new_rental = Rental.new(selected_book, selected_people, selected_date)
-    @rentals << new_rental
-    puts "Rental created successfully\n\n"
-    else 
-      puts "You don't have Book or Person in your library please add at least one"
+    if !@people.empty? && !@books.empty?
+      puts "Select a book from the following list by a number:"
+      list_all_books
+      book_index = gets.chomp.to_i
+      selected_book = @books[book_index]
+      
+      puts "Select a person from the following list by a number:"
+      list_all_people
+      people_index = gets.chomp.to_i
+      selected_person = @people[people_index]
+      
+      print "Date: "
+      selected_date = gets.chomp
+      
+      new_rental = Rental.new(selected_book, selected_person, selected_date)
+      @rentals << new_rental
+      
+      puts "Rental created successfully\n\n"
+    else
+      puts "You don't have both a book and a person in your library. Please add at least one of each."
+    end
   end
-end
 
   def list_all_books
     if @books.empty?
